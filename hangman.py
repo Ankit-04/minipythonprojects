@@ -1,5 +1,5 @@
 import random
-
+import os
 word_list = ["python", "javascript", "typescript", "rubyonrails", "react", "angular"]
 letters_guessed = []
 word = random.choice(word_list)
@@ -11,6 +11,7 @@ for x in range(len(word)):
     underscores.append("-")
         
 while playing == True:
+    os.system('cls')
     print("".join(underscores))
     print("lives:",lives)  
     letter_guessed = str(input("Guess a letter: "))
