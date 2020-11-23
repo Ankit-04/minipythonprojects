@@ -1,3 +1,4 @@
+import os
 square = ["1","2","3","4","5","6","7","8","9"]
 mark = "X"
 
@@ -13,12 +14,15 @@ def game():
                 mark = "X"
             square[choice-1] = mark
             if checkwin() == 1:
+                draw()
                 print(mark,"wins")
                 break
             elif checkwin() == 2:
+                draw()
                 print("draw")
                 break
 def draw():
+    os.system('cls')
     print("     |     |     ")
     print("  " + square[0] + "  |  " + square[1] + "  |  " + square[2])
 
